@@ -27,6 +27,10 @@ class Longitud extends Unidades implements UnidadesInterface {
     }
 }
 
+$from_value = '';
+$from_unit = '';
+$to_unit = '';
+$to_value = '';
 
 if(isset($_POST['submit'])) {
     $from_value = $_POST['from_value'];
@@ -72,24 +76,26 @@ if(isset($_POST['submit'])) {
                                 <input type="text" id="cantidades" class="conversor__data-input" name="category">
                                 <select name="" id="cantidades" class="conversor__data-cantidades">
                                     <option selected>Unidades</option>
-                                    <option value="Longitud"<?php if($from_unit == '') { echo " selected"; } ?>>Longitud</option>
-                                    <option value="Masa"<?php if($from_unit == '') { echo " selected"; } ?>>Masa</option>
-                                    <option value="Volumen"<?php if($from_unit == '') { echo " selected"; } ?>>Volumen</option>
-                                    <option value="Datos"<?php if($from_unit == '') { echo " selected"; } ?>>Datos</option>
-                                    <option value="Moneda"<?php if($from_unit == '') { echo " selected"; } ?>>Moneda</option>
-                                    <option value="Tiempo"<?php if($from_unit == '') { echo " selected"; } ?>>Tiempo</option>
+                                    <option value="Longitud"<?php if($from_unit == 'inches') { echo " selected"; } ?>>inches</option>
+                                    <option value="Masa"<?php if($from_unit == 'feet') { echo " selected"; } ?>>feet</option>
+                                    <option value="Volumen"<?php if($from_unit == 'yards') { echo " selected"; } ?>>yards</option>
+                                    <option value="Datos"<?php if($from_unit == 'miles') { echo " selected"; } ?>>miles</option>
+                                    <option value="Moneda"<?php if($from_unit == 'centimeters') { echo " selected"; } ?>>centimeters</option>
+                                    <option value="Tiempo"<?php if($from_unit == 'meters') { echo " selected"; } ?>>meters</option>
+                                    <option value="Tiempo"<?php if($from_unit == 'kilometers') { echo " selected"; } ?>>kilometers</option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">Selecciona la unidad a convertir</h3>
                             <div class="conversor__options-container">
                                 <select name="" id="" class="conversor__options-cantidades">
                                     <option selected>Unidades</option>
-                                    <option value="Longitud">Longitud</option>
-                                    <option value="Masa">Masa</option>
-                                    <option value="Volumen">Volumen</option>
-                                    <option value="Datos">Datos</option>
-                                    <option value="Moneda">Moneda</option>
-                                    <option value="Tiempo">Tiempo</option>
+                                    <option value="Longitud"<?php if($from_unit == 'inches') { echo " selected"; } ?>>inches</option>
+                                    <option value="Masa"<?php if($from_unit == 'feet') { echo " selected"; } ?>>feet</option>
+                                    <option value="Volumen"<?php if($from_unit == 'yards') { echo " selected"; } ?>>yards</option>
+                                    <option value="Datos"<?php if($from_unit == 'miles') { echo " selected"; } ?>>miles</option>
+                                    <option value="Moneda"<?php if($from_unit == 'centimeters') { echo " selected"; } ?>>centimeters</option>
+                                    <option value="Tiempo"<?php if($from_unit == 'meters') { echo " selected"; } ?>>meters</option>
+                                    <option value="Tiempo"<?php if($from_unit == 'kilometers') { echo " selected"; } ?>>kilometers</option>
                                 </select>
                             </div>
                         </form>
