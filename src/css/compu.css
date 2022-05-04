@@ -1,22 +1,23 @@
 header {
     width: 100%;
-    height: 120px;
+    height: 223px;
 }
 
 .header__title-container {
-    height: 80px;
+    height: 150px;
 }
 
 .header__subtitle-container {
-    height: 40px;
+    height: 73px;
+    padding-top: 10px;
 }
 
 .header__title-container h1 {
-    font-size: 4rem;
+    font-size: 8rem;
 }
 
 .header__subtitle-container p {
-    font-size: 2.6rem;
+    font-size: 3rem;
 }
 
 .conversor__home--button {
