@@ -40,6 +40,22 @@ if(isset($_POST['submit'])) {
     $to_value = convert_length($from_value, $from_unit, $to_unit);
 }
 
+$data_options = array(
+    "bytes",
+    "kilobytes",
+    "megabytes",
+    "gigabytes",
+    "terabytes",
+);
+
+const Datos_a_Bits = array(
+    "bytes" => 1,
+    "kilobytes" => 1024,
+    "megabytes" => 1048576,
+    "gigabytes" => 1073741824,
+    "terabytes" => 1099511627776,
+);
+
 ?>
 
 <!DOCTYPE html>
