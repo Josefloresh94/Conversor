@@ -40,6 +40,25 @@ if(isset($_POST['submit'])) {
     $to_value = convert_length($from_value, $from_unit, $to_unit);
 }
 
+$length_options = array(
+
+    "miles",
+    "millimeters", 
+    "centimeters" ,
+    "meters" ,
+    "kilometers",
+);
+
+const LENGTH_TO_METER = array(
+    
+    "miles" => 1609.344,
+    "millimeters" => 0.001,
+    "centimeters" => 0.01,
+    "meters" => 1,
+    "kilometers" => 1000,
+    
+);
+
 ?>
 
 <!DOCTYPE html>
