@@ -1,3 +1,64 @@
+<?php
+require_once('Unidades'); 
+require_once('includes/functions.php'); 
+
+class Longitud extends Unidades implements UnidadesInterface {
+
+    public function convert_to($value, $from_unit) {
+        if(array_key_exists($from_unit, LENGTH_TO_METER)) {
+            return $value * LENGTH_TO_METER[$from_unit];
+        } else {
+            return "Unsupported unit.";
+        }
+    }
+        
+    public function convert_from($value, $to_unit) {
+        if(array_key_exists($to_unit, LENGTH_TO_METER)) {
+            return $value / LENGTH_TO_METER[$to_unit];
+        } else {
+            return "Unsupported unit.";
+        }
+    }
+    
+    function convert_volumen($value, $from_unit, $to_unit) {
+        $meter_value = convert_to($value, $from_unit);
+        $new_value = convert_from($meter_value, $to_unit);
+        return $new_value;
+    }
+}
+
+$from_value = '';
+$from_unit = '';
+$to_unit = '';
+$to_value = '';
+
+if(isset($_POST['submit'])) {
+    $from_value = $_POST['from_value'];
+    $from_unit = $_POST['from_unit'];
+    $to_unit = $_POST['to_unit'];
+    
+    $to_value = convert_volumen($from_value, $from_unit, $to_unit);
+}
+
+$volum_options = array(
+
+    "milímetro cubico",
+    "centímetro cubico",
+    "decímetro cubico",
+    "metro cubico",
+    "kilómetro cubico",
+);
+
+const VOLUME_TO = array(
+    
+    "milímetro cubico" => 0.000000001,
+    "centímetro cubico" => 0.000001 ,
+    "decímetro cubico" =>0.001,
+    "metro cubico" => 1,
+    "kilómetro cubico" => 1000000000,
+);  
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

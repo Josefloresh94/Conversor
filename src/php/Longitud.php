@@ -42,20 +42,20 @@ if(isset($_POST['submit'])) {
 
 $length_options = array(
 
-    "miles",
     "millimeters", 
     "centimeters" ,
     "meters" ,
     "kilometers",
+    "miles",
 );
 
 const LENGTH_TO_METER = array(
     
-    "miles" => 1609.344,
     "millimeters" => 0.001,
     "centimeters" => 0.01,
     "meters" => 1,
     "kilometers" => 1000,
+    "miles" => 1609.344,
     
 );
 
