@@ -1,6 +1,6 @@
 <?php
-require_once('Unidades'); 
-require_once('includes/functions.php'); 
+require_once('Unidades.php'); 
+require_once('functions.php'); 
 
 class Longitud extends Unidades implements UnidadesInterface {
 

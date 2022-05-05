@@ -20,7 +20,7 @@ class Masa extends Unidades implements UnidadesInterface {
         }
     }
     
-    function convert_length($value, $from_unit, $to_unit) {
+    function convert_mass($value, $from_unit, $to_unit) {
         $meter_value = convert_to($value, $from_unit);
         $new_value = convert_from($meter_value, $to_unit);
         return $new_value;
@@ -37,7 +37,7 @@ if(isset($_POST['submit'])) {
     $from_unit = $_POST['from_unit'];
     $to_unit = $_POST['to_unit'];
     
-    $to_value = convert_length($from_value, $from_unit, $to_unit);
+    $to_value = convert_mass($from_value, $from_unit, $to_unit);
 }
 
 $mass_options = array(
