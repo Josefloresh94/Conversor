@@ -5,16 +5,16 @@ require_once('includes/functions.php');
 class Longitud extends Unidades implements UnidadesInterface {
 
     public function convert_to($value, $from_unit) {
-        if(array_key_exists($from_unit, LENGTH_TO_METER)) {
-            return $value * LENGTH_TO_METER[$from_unit];
+        if(array_key_exists($from_unit, VOLUME_TO)) {
+            return $value * VOLUME_TO[$from_unit];
         } else {
             return "Unsupported unit.";
         }
     }
         
     public function convert_from($value, $to_unit) {
-        if(array_key_exists($to_unit, LENGTH_TO_METER)) {
-            return $value / LENGTH_TO_METER[$to_unit];
+        if(array_key_exists($to_unit, VOLUME_TO)) {
+            return $value / VOLUME_TO[$to_unit];
         } else {
             return "Unsupported unit.";
         }

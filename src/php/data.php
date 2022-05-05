@@ -2,9 +2,9 @@
 require_once('Unidades'); 
 require_once('includes/functions.php'); 
 
-class Data extends Unidades implements UnidadesInterface {
+class Data extends Unidades implements UnidadesInterface{
 
-    public function convert_to($value, $from_unit) {
+    public function convert_to($value, $from_unit){
         if(array_key_exists($from_unit, LENGTH_TO_METER)) {
             return $value * LENGTH_TO_METER[$from_unit];
         } else {
@@ -20,7 +20,7 @@ class Data extends Unidades implements UnidadesInterface {
         }
     }
     
-    function convert_data($value, $from_unit, $to_unit) {
+    function convert_data($value, $from_unit, $to_unit){
         $meter_value = convert_to($value, $from_unit);
         $new_value = convert_from($meter_value, $to_unit);
         return $new_value;

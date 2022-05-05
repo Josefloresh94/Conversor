@@ -14,27 +14,13 @@ const LENGTH_TO_METER = array(
     "nautical_miles" => 1852
 );
 
-const VOLUME_TO_LITER = array(
-    "cubic_inches" => 0.0163871,
-    "cubic_feet" => 28.3168,
-    "cubic_centimeters" => 0.001,
-    "cubic_meters" => 1000,
-    "imperial_gallons" => 4.54609,
-    "imperial_quarts" => 1.13652,
-    "imperial_pints" => 0.568261,
-    "imperial_cups" => 0.284131,
-    "imperial_ounces" => 0.0284131,
-    "imperial_tablespoons" => 0.0177582,
-    "imperial_teaspoons" => 0.00591939,
-    "us_gallons" => 3.78541,
-    "us_quarts" => 0.946353,
-    "us_pints" => 0.473176,
-    "us_cups" => 0.24,
-    "us_ounces" => 0.0295735,
-    "us_tablespoons" => 0.0147868,
-    "us_teaspoons" => 0.00492892,
-    "liters" => 1,
-    "milliliters" => 0.001,
+const VOLUME_TO = array(
+    
+    "milímetro cubico" => 0.000000001,
+    "centímetro cubico" => 0.000001 ,
+    "decímetro cubico" =>0.001,
+    "metro cubico" => 1,
+    "kilómetro cubico" => 1000000000,
 );  
 
 const MASS_TO_KILOGRAM = array(
