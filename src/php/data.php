@@ -67,11 +67,11 @@
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">¡Convierte!</h3>
-                        <div class="conversor__button-container">
-                            <input type="submit" name='enviar' value="CONVERTIR">
-                        </div>
-                        <div class="conversor__answer-container">
-                            <h3 class="conversor__answer-data"> <br>
+                            <div class="conversor__button-container">
+                                <input type="submit" name='enviar' value="CONVERTIR">
+                            </div>
+                            <div class="conversor__answer-container">
+                                <h3 class="conversor__answer-data"> <br>
    <!-- acá poner código php -->                         
 <?php
 
@@ -79,10 +79,9 @@ include_once 'data_codigo_clase.php';
 
 ?>
 
-                            </h3>
-                        </div>
+                                </h3>
+                            </div>
                         </form>
-                        
                     </div>
                 </article>
             </section>
