@@ -1,7 +1,6 @@
 <?php
-require_once('Unidades'); 
 require_once('includes/functions.php'); 
-
+/*
 class Masa extends Unidades implements UnidadesInterface {
 
     public function convert_to($value, $from_unit) {
@@ -50,7 +49,7 @@ $mass_options = array(
     "grams",
     "kilograms",
     "metric tonnes"
-);
+);*/
 
 ?>
 
@@ -87,28 +86,40 @@ $mass_options = array(
                         <h3 class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</h3>
                         <form action="" method="post">
                             <div class="conversor__data">
-                                <input type="text" id="cantidades" class="conversor__data-input" name="category">
+                                <input type="text" id="cantidades" class="conversor__data-input" name="cantidad">
                                 <select name="from_unit">
-                                    <?php
+                                    <option value="">Microgramo</option>
+                                    <option value="">Miligramo</option>
+                                    <option value="">Gramo</option>
+                                    <option value="">Libra</option>
+                                    <option value="">Kilogramo</option>
+                                    <option value="">Tonelada</option>
+                                    <?php/*
                                     foreach($mass_options as $unit) {
                                         $opt = optionize($unit);
                                         echo "<option value=\"{$opt}\"";
                                         if($from_unit == $opt) { echo " selected"; }
                                         echo ">{$unit}</option>";
-                                    }
+                                    }*/
                                     ?>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">Selecciona la unidad a convertir</h3>
                             <div class="conversor__options-container">
                                 <select name="to_unit">
-                                    <?php
+                                    <option value="">Microgramo</option>
+                                    <option value="">Miligramo</option>
+                                    <option value="">Miligramo</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <?php/*
                                     foreach($mass_options as $unit) {
                                         $opt = optionize($unit);
                                         echo "<option value=\"{$opt}\"";
                                         if($to_unit == $opt) { echo " selected"; }
                                             echo ">{$unit}</option>";
-                                    }
+                                    }*/
                                     ?>
                                 </select>
                             </div>

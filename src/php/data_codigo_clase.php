@@ -18,12 +18,14 @@ public $cantidad;
 public $from;
 public $to;
 
+
+
 public function Bytes(){
   if (isset($_POST['enviar'])){
     $this->cantidad = $_POST['cantidad'];   
     $this->from = $_POST['from_unit'];
     $this->to = $_POST['to_unit'];
-
+    
     if ($this->from=="Bytes" & $this->to=="Bytes") {
         echo $this->cantidad . " ". $this->from . " = " . $this->cantidad . " " . $this->to;
         }
