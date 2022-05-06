@@ -42,7 +42,7 @@
                             <!-- CANTIDAD -->
                                 <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus>
 
-                            <!-- F R O M -->
+                            <!-- F R O M (PONER NAME A SELECT Y VALUE A OPTION)-->
                                 <select name='from_unit' class="conversor__data-cantidades" value='from_unit'>
                                     <option value="" selected>Unidades</option>
                                     <option value="Bytes">Bytes</option>
@@ -56,7 +56,7 @@
                             <h3 class="conversor__card-subtitle">Selecciona la unidad a convertir</h3>
                             <div class="conversor__options-container">
                                 
-                                <!-- T O -->
+                                <!-- T O (PONER NAME A SELECT Y VALUE A OPTION)-->
                                 <select name='to_unit' class="conversor__options-cantidades" value='to_unit'>
                                     <option value="" selected>Unidades</option>
                                     <option value="Bytes">Bytes</option>
@@ -69,7 +69,7 @@
                             </div>
                             <h3 class="conversor__card-subtitle">¡Convierte!</h3>
                         <div class="conversor__button-container">
-                            <input type="submit" name='enviar' value="CONVERTIR">
+                            <input class="conversor__button" type="submit" name='enviar' value="CONVERTIR">
                         </div>
                         <div class="conversor__answer-container">
                             <h3 class="conversor__answer-data"> <br>
