@@ -1,5 +1,5 @@
 <?php
-
+/*
 const LENGTH_TO_METER = array(
     "inches" => 0.0254,
     "feet" => 0.3048,
@@ -120,30 +120,52 @@ function convert_volume($value, $from_unit, $to_unit) {
     $new_value = convert_from_liters($liter_value, $to_unit);
     return $new_value;
 }
+*/
 
 // Mass
-function convert_to_kilograms($value, $from_unit) {
-    if(array_key_exists($from_unit, MASS_TO_KILOGRAM)) {
-        return $value * MASS_TO_KILOGRAM[$from_unit];
-    } else {
-        return "Unsupported unit.";
+class Masa {
+
+public $tonelada = 1000000;
+public $kilogramo = 1000;
+public $libra = 453.59;
+public $gramo = 1;
+public $miligramo = 0.001;
+public $milligramo = 0.000001;
+public $enviar;
+public $cantidad;
+public $from;
+public $to;
+//FUNCION DE CONVERTIR
+public function Convertir(){
+    if (isset ($_POST["enviar"])) {
+    $this->cantidad = $_POST ["cantidad"];
+    $this->from = $_POST ["from_unit"];
+    $this->to = $_POST ["to_unit"];
+    if ($this->from=="mc" & $this->to=="mc") {
+        echo "MC a MC";
+    }
+    if ($this->from=="mc" & $this->to=="ml") {
+        echo "MC a ML";
+    }
+    if ($this->from=="mc" & $this->to=="gr") {
+        echo "MC a GR";
+    }
+    if ($this->from=="mc" & $this->to=="lb") {
+        echo "MC a LB";
+    }
+    if ($this->from=="mc" & $this->to=="kg") {
+        echo "MC a KG";
+    }
+    if ($this->from=="mc" & $this->to=="tn") {
+        echo "MC a TN";
+    }
     }
 }
-    
-function convert_from_kilograms($value, $to_unit) {
-    if(array_key_exists($to_unit, MASS_TO_KILOGRAM)) {
-        return $value / MASS_TO_KILOGRAM[$to_unit];
-    } else {
-        return "Unsupported unit.";
-    }
 }
-
-function convert_mass($value, $from_unit, $to_unit) {
-    $kg_value = convert_to_kilograms($value, $from_unit);
-    $new_value = convert_from_kilograms($kg_value, $to_unit);
-    return $new_value;
-}
-
+//crear objeto
+$Conversion = new Masa;
+$Conversion -> Convertir();
+/*
 // Speed
 function convert_speed($value, $from_unit, $to_unit) {
     if($from_unit == 'knots') { $from_unit = 'nautical_miles_per_hour'; }
@@ -197,5 +219,5 @@ function convert_temperature($value, $from_unit, $to_unit) {
     $new_value = convert_from_celsius($celsius_value, $to_unit);
     return $new_value;
 }
-
+*/
 ?>

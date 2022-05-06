@@ -15,6 +15,7 @@
         margin: 0;
   }
 </style>
+
 </head>
 <body>
     <header>
@@ -34,12 +35,12 @@
                 <article class="conversor__container-card">
                     <p class="unitie">Datos</p>
                     <div class="conversor__info-container">
-                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                        <form action="" method="post">
                             <div class="conversor__data">
                             <label for="" class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
 
                             <!-- CANTIDAD -->
-                                <input class="conversor__data-input" type="number" name='cantidad' value='' required step="any">
+                                <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus>
 
                             <!-- F R O M -->
                                 <select name='from_unit' class="conversor__data-cantidades" value='from_unit'>
@@ -67,6 +68,7 @@
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">¡Convierte!</h3>
+<<<<<<< HEAD
                             <div class="conversor__button-container">
                                 <input type="submit" name='enviar' value="CONVERTIR">
                             </div>
@@ -81,6 +83,20 @@ include_once 'data_codigo_clase.php';
 
                                 </h3>
                             </div>
+=======
+                        <div class="conversor__button-container">
+                            <input type="submit" name='enviar' value="CONVERTIR">
+                        </div>
+                        <div class="conversor__answer-container">
+                            <h3 class="conversor__answer-data"> <br>
+                            
+   <!-- acá poner código php -->                         
+   <?php 
+   include_once 'data_codigo_clase.php'; 
+   ?>
+                            </h3>
+                        </div>
+>>>>>>> 31ed33dff75540ae79a8f83d4c7e14febe8767d0
                         </form>
                     </div>
                 </article>
