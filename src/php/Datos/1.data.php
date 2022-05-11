@@ -35,22 +35,21 @@
                 <article class="conversor__container-card">
                     <p class="unitie">Datos</p>
                     <div class="conversor__info-container">
-                        <form action="" method="post">
+                        <form onsubmit = "if(id_complejo.selectedIndex==0) {alert('error'); return false} action="2.Capturar_Definir_Datos.php" method="post">
                             <div class="conversor__data">
-                            <label for="" class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
+                            <label for='' class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
 
                             <!-- CANTIDAD -->
                                 <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus>
 
                             <!-- F R O M (PONER NAME A SELECT Y VALUE A OPTION)-->
                                 <select name='from_unit' class="conversor__data-cantidades" value='from_unit'>
-                                    <option value="" selected>Unidades</option>
+                            <!--    <option value="" selected>Unidades</option> -->
                                     <option value="Bytes">Bytes</option>
                                     <option value="Kilobytes">Kilobytes</option>
                                     <option value="Megabytes">Megabytes</option>
                                     <option value="Gigabytes">Gigabytes</option>
                                     <option value="Terabytes">Terabytes</option>
-                                    <option value=""></option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">Selecciona la unidad a convertir</h3>
@@ -58,25 +57,24 @@
                                 
                                 <!-- T O (PONER NAME A SELECT Y VALUE A OPTION)-->
                                 <select name='to_unit' class="conversor__options-cantidades" value='to_unit'>
-                                    <option value="" selected>Unidades</option>
+                                    <!--    <option value="" selected>Unidades</option> -->
                                     <option value="Bytes">Bytes</option>
                                     <option value="Kilobytes">Kilobytes</option>
                                     <option value="Megabytes">Megabytes</option>
                                     <option value="Gigabytes">Gigabytes</option>
                                     <option value="Terabytes">Terabytes</option>
-                                    <option value=""></option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">¡Convierte!</h3>
                         <div class="conversor__button-container">
-                            <input class="conversor__button" type="submit" name='enviar' value="CONVERTIR">
+                            <button class="conversor__button" name='enviar'>CONVERTIR</button>
                         </div>
                         <div class="conversor__answer-container">
                             <h3 class="conversor__answer-data"> <br>
                             
    <!-- acá poner código php -->                         
    <?php 
-   include_once 'data_codigo_clase.php'; 
+    include '2.Captura_de_Datos.php';
    ?>
                             </h3>
                         </div>
