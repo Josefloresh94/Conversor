@@ -35,7 +35,7 @@
                 <article class="conversor__container-card">
                     <p class="unitie">Datos</p>
                     <div class="conversor__info-container">
-                        <form onsubmit = "if(id_complejo.selectedIndex==0) {alert('error'); return false} action="2.Capturar_Definir_Datos.php" method="post">
+                        <form action="" method="post">
                             <div class="conversor__data">
                             <label for='' class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
 
