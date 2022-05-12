@@ -79,7 +79,6 @@
                             </h3>
                         </div>
                         </form>
-                        
                     </div>
                 </article>
             </section>
