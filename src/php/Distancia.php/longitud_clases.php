@@ -14,21 +14,21 @@ interface Distancia{
           
         public function Convertir(){
           if (isset($_POST['enviar'])){
-            $cantidad = $_POST['cantidad'];   
-            $from = $_POST['from_unit'];
+           $cantidad = $_POST['cantidad'];   
+            $this->from = $_POST['from_unit'];
             $to = $_POST['to_unit'];
           }
     //// CONVERTIR A M
               
-                if ($from=='millimeters') {
+                if ($this->from=='millimeters') {
                   $converM = $cantidad/1000;
-                } elseif ($from=='centimeters'){
+                } elseif ($this->from=='centimeters'){
                   $converM = $cantidad/100;
-                } elseif ($from=='meters'){
+                } elseif ($this->from=='meters'){
                   $converM = $cantidad*1;
-                } elseif ($from=='kilometers'){
+                } elseif ($this->fromm=='kilometers'){
                   $converM = $cantidad*1000;
-                }  elseif ($from=='miles'){
+                }  elseif ($this->from=='miles'){
                   $converM = $cantidad*1609;
                 }  else {
                   ;
