@@ -39,12 +39,12 @@
                             <div class="conversor__data">
                             <label for='' class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
 
-                            <!-- CANTIDAD -->
+                            <!-- CANTIDAD INGRESADA POR USUARIO-->
                                 <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus>
 
-                            <!-- F R O M (PONER NAME A SELECT Y VALUE A OPTION)-->
-                                <select name='from_unit' class="conversor__data-cantidades" value='from_unit'>
-                            <!--    <option value="" selected>Unidades</option> -->
+                            <!-- UNIDAD DE ORIGEN ELEGIDA POR USUARIO-->
+                                <select name='from_unit' class="conversor__data-cantidades" value='from_unit' required>
+                                    <option value selected>Unidades</option>
                                     <option value="Bytes">Bytes</option>
                                     <option value="Kilobytes">Kilobytes</option>
                                     <option value="Megabytes">Megabytes</option>
@@ -55,9 +55,9 @@
                             <h3 class="conversor__card-subtitle">Selecciona la unidad a convertir</h3>
                             <div class="conversor__options-container">
                                 
-                                <!-- T O (PONER NAME A SELECT Y VALUE A OPTION)-->
-                                <select name='to_unit' class="conversor__options-cantidades" value='to_unit'>
-                                    <!--    <option value="" selected>Unidades</option> -->
+                                <!-- UNIDAD DE DESTINO ELEGIDA POR USUARIO-->
+                                <select name='to_unit' class="conversor__options-cantidades" value='to_unit' required>
+                                    <option value selected>Unidades</option>
                                     <option value="Bytes">Bytes</option>
                                     <option value="Kilobytes">Kilobytes</option>
                                     <option value="Megabytes">Megabytes</option>

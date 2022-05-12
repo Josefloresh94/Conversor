@@ -5,7 +5,7 @@ include '5.Instanciar.php';
 
 class Bytes_a_Unidad extends Unidad_a_Bytes {
   
-  public function Bytes_a_Unidades (){
+  protected function Bytes_a_Unidades (){
     $this->Captura ();
     $this->Convertir_a_Bytes ();
  

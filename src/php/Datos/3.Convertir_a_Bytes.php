@@ -5,7 +5,7 @@ include '4.Convertir_a_Unidades.php';
 
 class Unidad_a_Bytes extends Datos {
 
-  public function Convertir_a_Bytes(){
+   protected function Convertir_a_Bytes(){
     $this->Captura ();
     switch ($this->from) {
       case 'Bytes':
@@ -24,7 +24,6 @@ class Unidad_a_Bytes extends Datos {
          $this->converBytes = $this->cantidad * parent::TERABYTE;
          break;
       }
-      return $this->converBytes;
-      }
-    }
+   }
+}
 ?>
