@@ -1,6 +1,6 @@
 <?php
-require_once('Unidades'); 
-require_once('includes/functions.php'); 
+//require_once('Unidades'); 
+//require_once('includes/functions.php'); 
 
 class Area extends Unidades implements UnidadesInterface {
 
