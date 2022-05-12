@@ -1,9 +1,10 @@
-<?php
+
+
 interface Datos{
   public function Convertir();
 }
 
-class Padre implements Datos {
+class Padre implements Datos{
   public $bytes = 1;
   public $kilobytes = 1024;
   public $megabytes = 1048576;
@@ -58,6 +59,7 @@ class Padre implements Datos {
   }
   }
 }
+
 
 class Hija extends Padre{
 }
