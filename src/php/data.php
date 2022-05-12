@@ -68,22 +68,6 @@
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">¡Convierte!</h3>
-<<<<<<< HEAD
-                            <div class="conversor__button-container">
-                                <input type="submit" name='enviar' value="CONVERTIR">
-                            </div>
-                            <div class="conversor__answer-container">
-                                <h3 class="conversor__answer-data"> <br>
-   <!-- acá poner código php -->                         
-<?php
-
-include_once 'data_codigo_clase.php';
-
-?>
-
-                                </h3>
-                            </div>
-=======
                         <div class="conversor__button-container">
                             <input type="submit" name='enviar' value="CONVERTIR">
                         </div>
@@ -96,7 +80,6 @@ include_once 'data_codigo_clase.php';
    ?>
                             </h3>
                         </div>
->>>>>>> 31ed33dff75540ae79a8f83d4c7e14febe8767d0
                         </form>
                     </div>
                 </article>
