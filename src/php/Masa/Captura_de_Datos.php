@@ -1,19 +1,19 @@
 <?php
 ///EN ESTA CLASE SE TOMARAN LOS DATOS INGRESADOS POR EL USUARIO
 
-include 'P3_Convertir_a_Bytes.php';
+include 'Convertir_a_Gramos.php';
 
-class Datos {
-  const BYTE = 1;
-  const KILOBYTE = 1024;
-  const MEGABYTE = 1048576;
-  const GIGABYTE = 1073741824;
-  const TERABYTE = 1099511627776;
+class Masa {
+  const MICROGRAMO  = 0.000001;
+  const MILIGRAMO   = 0.001;
+  const GRAMO       = 1;
+  const KILOGRAMO   = 1000;
+  const TONELADA    = 1000000;
 
   protected $cantidad=null;
   protected $from=null;
   protected $to=null;
-  protected $converBytes = null;
+  protected $convertGram = null;
 
   protected  function Captura (){
     if (isset($_POST['enviar'])) {

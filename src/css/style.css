@@ -127,19 +127,8 @@ main {
     color: var(--texto);
 }
 
-.conversor__container-slider {
-    display: flex;
-    gap: 20px;
-    height: 500px;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
-}
-
 .conversor__container-card {
     position: relative;
-    scroll-snap-align: center;
     width: 70%;
     min-width: 230px;
     max-width: 300px;
@@ -198,6 +187,7 @@ main {
     height: 30px;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    margin-top: 20px;
 }
 
 .conversor__data-cantidades {

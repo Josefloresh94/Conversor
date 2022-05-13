@@ -36,14 +36,14 @@
                     <p class="unitie">Longitud</p>
                     <div class="conversor__info-container">
                         <form action="" method="post">
-                            <div class="conversor__longitud">
+                            <div class="conversor__data">
                             <label for='' class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
 
                             <!-- CANTIDAD -->
-                                <input class="conversor__longitud-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus>
+                                <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus>
 
                             <!-- F R O M (PONER NAME A SELECT Y VALUE A OPTION)-->
-                                <select name='from_unit' class="conversor__longitud-cantidades" value='from_unit'>
+                                <select name='from_unit' class="conversor__data-cantidades" value='from_unit'>
                             <!--    <option value="" selected>Unidades</option> -->
                                     <option value="millimeters">Milimetros</option>
                                     <option value="centimeters">Centimetros</option>
@@ -66,20 +66,19 @@
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">¡Convierte!</h3>
-                        <div class="conversor__button-container">
-                            <button class="conversor__button" name='enviar'>CONVERTIR</button>
-                        </div>
-                        <div class="conversor__answer-container">
-                            <h3 class="conversor__answer-longitud"> <br>
-                            
-   <!-- acá poner código php -->                         
-   <?php 
-    include 'conversionDistancias.php';
-   ?>
-                            </h3>
-                        </div>
+                            <div class="conversor__button-container">
+                                <button class="conversor__button" name='enviar'>CONVERTIR</button>
+                            </div>
+                            <div class="conversor__answer-container">
+                                <h3 class="conversor__answer-data"> 
+                                    <br>
+                                    <!-- acá poner código php -->                         
+                                    <?php 
+                                        include 'conversionDistancias.php';
+                                    ?>
+                                </h3>
+                            </div>
                         </form>
-                        
                     </div>
                 </article>
             </section>

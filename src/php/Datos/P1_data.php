@@ -13,8 +13,8 @@
         input[type=number]::-webkit-outer-spin-button{
         -webkit-appearance: none;
         margin: 0;
-  }
-</style>
+        }
+    </style>
 
 </head>
 <body>
@@ -70,12 +70,12 @@
                             <button class="conversor__button" name='enviar'>CONVERTIR</button>
                         </div>
                         <div class="conversor__answer-container">
-                            <h3 class="conversor__answer-data"> <br>
-                            
-   <!-- acá poner código php -->                         
-   <?php 
-    include '2.Captura_de_Datos.php';
-   ?>
+                            <h3 class="conversor__answer-data"> 
+                                <br>
+                                <!-- acá poner código php -->                         
+                                <?php 
+                                    include 'P2_Captura_de_Datos.php';
+                                ?>
                             </h3>
                         </div>
                         </form>
