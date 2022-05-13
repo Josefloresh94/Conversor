@@ -1,46 +1,4 @@
-<?php
-//require_once('Unidades'); 
-//require_once('includes/functions.php'); 
 
-class Area extends Unidades implements UnidadesInterface {
-
-    public function convert_to($value, $from_unit) {
-        if(array_key_exists($from_unit, LENGTH_TO_METER)) {
-            return $value * LENGTH_TO_METER[$from_unit];
-        } else {
-            return "Unsupported unit.";
-        }
-    }
-        
-    public function convert_from($value, $to_unit) {
-        if(array_key_exists($to_unit, LENGTH_TO_METER)) {
-            return $value / LENGTH_TO_METER[$to_unit];
-        } else {
-            return "Unsupported unit.";
-        }
-    }
-    
-    function convert_area($value, $from_unit, $to_unit) {
-        $meter_value = convert_to($value, $from_unit);
-        $new_value = convert_from($meter_value, $to_unit);
-        return $new_value;
-    }
-}
-
-$from_value = '';
-$from_unit = '';
-$to_unit = '';
-$to_value = '';
-
-if(isset($_POST['submit'])) {
-    $from_value = $_POST['from_value'];
-    $from_unit = $_POST['from_unit'];
-    $to_unit = $_POST['to_unit'];
-    
-    $to_value = convert_area($from_value, $from_unit, $to_unit);
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,9 +6,9 @@ if(isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/tablet.css" media="(min-width:768px)">
-    <link rel="stylesheet" href="../css/compu.css" media="(min-width:1024px)">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tablet.css" media="(min-width:768px)">
+    <link rel="stylesheet" href="../../css/compu.css" media="(min-width:1024px)">
     <title>Conversor</title>
 </head>
 <body>
@@ -64,9 +22,6 @@ if(isset($_POST['submit'])) {
     </header>
     <main>
         <section id="conversor" class="main__conversor">
-            <div class="conversor__title">
-                <h2>Escoge la unidad de medida que necesitas.<h2>
-            </div>
             <section class="conversor__container-slider">
                 <article class="conversor__container-card">
                     <p class="unitie">Area</p>
@@ -120,7 +75,7 @@ if(isset($_POST['submit'])) {
                 <li>Hecho por:</li>
                 <li><a href="">Katherine Chavarria</a></li>
                 <li><a href="">Jonathan Sifontes</a></li>
-                <li><a href="">Katy</a></li>
+                <li><a href="">Katya Hernandez</a></li>
                 <li><a href="">José Flores</a></li>
             </ul>
         </section>

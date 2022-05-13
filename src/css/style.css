@@ -43,7 +43,7 @@ header {
 .header__title-container {
     width: 100%;
     min-width: 288px;
-    height: 70px;
+    height: 80px;
     text-align: center;
     align-self: center;
     background: var(--mustard);
@@ -52,7 +52,7 @@ header {
 .header__subtitle-container {
     width: 100%;
     min-width: 288px;
-    height: 30px;
+    height: 20px;
     text-align: center;
     align-self: center;
     background: var(--black);
@@ -108,7 +108,7 @@ main {
 .main__conversor {
     width: 100%;
     min-width: 320px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     text-align: center;
 }
 

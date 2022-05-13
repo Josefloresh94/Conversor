@@ -10,23 +10,23 @@ class Gramos_a_Unidad extends Unidad_a_Gramos {
     $this->Convertir_a_Gramos ();
  
       switch ($this->to){
-        case 'Bytes':
+        case 'Microgramo':
           $ConvertirUnidad = $this->convertGram / parent::MICROGRAMO;
           echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
           break;
-        case "Kilobytes":
+        case "Miligramo":
           $ConvertirUnidad = $this->convertGram / parent::MILIGRAMO;
           echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
           break;
-        case "Megabytes":
+        case "Gramo":
           $ConvertirUnidad = $this->convertGram / parent::GRAMO;
           echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
           break;
-        case "Gigabytes":
+        case "Kilogramo":
           $ConvertirUnidad = $this->convertGram / parent::KILOGRAMO;
           echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
           break;
-        case "Terabytes":
+        case "Tonelada":
           $ConvertirUnidad = $this->convertGram / parent::TONELADA;
           echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
         break;

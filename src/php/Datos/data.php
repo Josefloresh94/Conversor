@@ -79,7 +79,7 @@
                             </h3>
                         </div>
                         </form>
-                    <a class="conversor__button" href="../../../index.html">Regresar a menú principal</a>
+                    <!-- <a class="conversor__button" href="../../../index.html">Regresar a menú principal</a> -->
                     </div>
                 </article>
             </section>
