@@ -13,8 +13,8 @@
         input[type=number]::-webkit-outer-spin-button{
         -webkit-appearance: none;
         margin: 0;
-  }
-</style>
+    }
+    </style>
 
 </head>
 <body>

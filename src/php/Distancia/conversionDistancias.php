@@ -10,21 +10,21 @@ class Distancias {
     public $kilometers;
     public $miles ;
 
-  public $cantidad=null;
-  public $from=null;
-  public $to=null;
-  public $converM = null;
+    public $cantidad=null;
+    public $from=null;
+    public $to=null;
+    public $converM = null;
 
-  public  function Captura (){
-    if (isset($_POST['enviar'])) {
-      $this->cantidad = $_POST['cantidad'];
-      $this->from = $_POST['from_unit'];
-      $this->to = $_POST['to_unit'];
-      $this->converM;
-      return $this->cantidad;
-      return $this->from;
-      return $this->to;
-      return $this->converM;
+    public  function Captura (){
+        if (isset($_POST['enviar'])) {
+            $this->cantidad = $_POST['cantidad'];
+            $this->from = $_POST['from_unit'];
+            $this->to = $_POST['to_unit'];
+            $this->converM;
+            return $this->cantidad;
+            return $this->from;
+            return $this->to;
+            return $this->converM;
         }       
     }
 
@@ -32,7 +32,7 @@ class Distancias {
 class M_a_Unidades extends Distancias{
 
     public function M_a_Unidad (){
-       
+        $this->Captura ();
         if ($this->to=='millimeters') {
             $converLong = $this->converM*1000;
             echo $this->cantidad." ".$this->from." equivale ".$converLong." ".$this->to;
@@ -51,7 +51,7 @@ class M_a_Unidades extends Distancias{
         }  else {
             ;
         }         
-}
+    }
 }
 
 ?>
