@@ -1,11 +1,7 @@
 <?php
 ///EN ESTA CLASE CONVERTIRREMOS DE UNIDAD DE ORIGEN SELECCIONADA A BYTES
 
-<<<<<<< HEAD:src/php/Datos/P3_Convertir_a_Bytes.php
-include 'P4_Convertir_a_Unidades.php';
-=======
 include 'Convertir_a_Unidades.php';
->>>>>>> cccce36c8b160c56c4ee4671fc47f6757e1b1d56:src/php/Datos/Convertir_a_Bytes.php
 
 class Unidad_a_Bytes extends Datos {
 

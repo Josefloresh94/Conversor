@@ -1,11 +1,7 @@
 <?php
 ///EN ESTA CLASE SE TOMARAN LOS DATOS INGRESADOS POR EL USUARIO
 
-<<<<<<< HEAD:src/php/Datos/P2_Captura_de_Datos.php
-include 'P3_Convertir_a_Bytes.php';
-=======
 include 'Convertir_a_Bytes.php';
->>>>>>> cccce36c8b160c56c4ee4671fc47f6757e1b1d56:src/php/Datos/Captura_de_Datos.php
 
 class Datos {
   const BYTE = 1;
