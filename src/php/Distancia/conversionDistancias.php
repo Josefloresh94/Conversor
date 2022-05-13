@@ -1,36 +1,7 @@
 <?php
-/// CONVERTIR A METROS 
-
-include 'capturadedatos.php';
-
-class Unidad_a_M extends Distancias  {
-
-    protected function Convertir_a_Mts(){
-       $this->Captura ();
- 
-       if ($this->from=='millimeters') {
-         $this->converM = $this->cantidad/parent:: millimeters;
- 
-       } elseif ($this->from=='centimeters'){
-         $this->converM = $this->cantidad/parent:: centimeters;
- 
-       } elseif ($this->from=='meters'){
-         $this->converM = $this->cantidad*parent:: meters;
- 
-       } elseif ($this->from=='kilometers'){
-         $this->converM = $this->cantidad*parent:: kilometers;
- 
-       }  elseif ($this->from=='miles'){
-         $this->converBytes = $this->cantidad*parent:: miles;
- 
-       }  else {
-         ;
-     } 
-     
-}
-}  
-
 /// CONVERTIR DE METROS A LAS DEMAS DISTANCIAS
+
+include 'conversionametros.php';
 
     class M_a_distancias extends Unidad_a_M {
 
@@ -40,24 +11,24 @@ class Unidad_a_M extends Distancias  {
 
         
             
-            if ($this->to=='millimeters') {
-                $ConvertirUnidad = $this->converM  * parent::millimeters;
+            if ($this->to=='Milímetros') {
+                $ConvertirUnidad = $this->converM  * parent::Milimetros;
             echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to ;
 
-            } elseif ($this->to=='centimeters'){
-                $ConvertirUnidad = $this->converM  * parent::centimeters;
+            } elseif ($this->to=='Centímetros'){
+                $ConvertirUnidad = $this->converM  * parent::Centimetros;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
 
-            } elseif ($this->to=='meters'){
-                $ConvertirUnidad = $this->converM  * parent::meters;
+            } elseif ($this->to=='Metros'){
+                $ConvertirUnidad = $this->converM  * parent::Metros;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
 
-            } elseif ($this->to=='kilometers'){
-                $ConvertirUnidad = $this->converM  / parent::kilometers;
+            } elseif ($this->to=='Kilómetros'){
+                $ConvertirUnidad = $this->converM  / parent::Kilometros;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
                 
-            }  elseif ($this->to=='miles'){
-                $ConvertirUnidad = $this->converM  / parent::miles;
+            }  elseif ($this->to=='Millas'){
+                $ConvertirUnidad = $this->converM  / parent::Millas;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
             }  else {
                 ;
