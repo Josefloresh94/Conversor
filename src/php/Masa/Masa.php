@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/tablet.css" media="(min-width:768px)">
-    <link rel="stylesheet" href="../css/compu.css" media="(min-width:1024px)">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tablet.css" media="(min-width:768px)">
+    <link rel="stylesheet" href="../../css/compu.css" media="(min-width:1024px)">
     <title>Conversor</title>
     <style>
         input[type=number]::-webkit-inner-spin-button,
         input[type=number]::-webkit-outer-spin-button{
         -webkit-appearance: none;
         margin: 0;
-  }
-</style>
+        }
+    </style>
 
 </head>
 <body>
@@ -28,60 +28,54 @@
     </header>
     <main>
         <section id="conversor" class="main__conversor">
-            <div class="conversor__title">
-                <h2>Escoge la unidad de medida que necesitas.</h2>
-            </div>
-            <section class="conversor__container-slider">
+            <section>
                 <article class="conversor__container-card">
-                    <p class="unitie">Datos</p>
+                    <p class="unitie">Masa</p>
                     <div class="conversor__info-container">
                         <form action="" method="post">
                             <div class="conversor__data">
-                            <label for="" class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
+                            <label for='' class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
 
-                            <!-- CANTIDAD -->
+                            <!-- CANTIDAD INGRESADA POR USUARIO-->
                                 <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus>
 
-                            <!-- F R O M -->
-                                <select name='from_unit' class="conversor__data-cantidades" value='from_unit'>
-                                    <option value="" selected>Unidades</option>
-                                    <option value="Bytes">Bytes</option>
-                                    <option value="Kilobytes">Kilobytes</option>
-                                    <option value="Megabytes">Megabytes</option>
-                                    <option value="Gigabytes">Gigabytes</option>
-                                    <option value="Terabytes">Terabytes</option>
-                                    <option value=""></option>
+                            <!-- UNIDAD DE ORIGEN ELEGIDA POR USUARIO-->
+                                <select name='from_unit' class="conversor__data-cantidades" value='from_unit' required>
+                                    <option value selected>Unidades</option>
+                                    <option value="Microgramo">Microgramo</option>
+                                    <option value="Miligramo">Miligramo</option>
+                                    <option value="Gramo">Gramo</option>
+                                    <option value="Kilogramo">Kilogramo</option>
+                                    <option value="Tonelada">Tonelada</option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">Selecciona la unidad a convertir</h3>
                             <div class="conversor__options-container">
                                 
-                                <!-- T O -->
-                                <select name='to_unit' class="conversor__options-cantidades" value='to_unit'>
-                                    <option value="" selected>Unidades</option>
-                                    <option value="Bytes">Bytes</option>
-                                    <option value="Kilobytes">Kilobytes</option>
-                                    <option value="Megabytes">Megabytes</option>
-                                    <option value="Gigabytes">Gigabytes</option>
-                                    <option value="Terabytes">Terabytes</option>
-                                    <option value=""></option>
+                                <!-- UNIDAD DE DESTINO ELEGIDA POR USUARIO-->
+                                <select name='to_unit' class="conversor__options-cantidades" value='to_unit' required>
+                                    <option value selected>Unidades</option>
+                                    <option value="Microgramo">Microgramo</option>
+                                    <option value="Miligramo">Miligramo</option>
+                                    <option value="Gramo">Gramo</option>
+                                    <option value="Kilogramo">Kilogramo</option>
+                                    <option value="Tonelada">Tonelada</option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">¡Convierte!</h3>
                         <div class="conversor__button-container">
-                            <input type="submit" name='enviar' value="CONVERTIR">
+                            <button class="conversor__button" name='enviar'>CONVERTIR</button>
                         </div>
                         <div class="conversor__answer-container">
-                            <h3 class="conversor__answer-data"> <br>
-                            
-   <!-- acá poner código php -->                         
-   <?php 
-   include_once 'data_codigo_clase.php'; 
-   ?>
+                            <h3 class="conversor__answer-data"> 
+                                <br>
+                                <!-- acá poner código php -->                         
+                                <?php 
+                                    include 'Captura_de_Datos.php';
+                                ?>
                             </h3>
                         </div>
                         </form>
-                        
                     </div>
                 </article>
             </section>

@@ -1,37 +1,33 @@
 <?php
 ///EN ESTA CLASE CONVERTIRREMOS DE BYTES A UNIDAD SELECCIONADA
 
-<<<<<<< HEAD:src/php/Datos/P4_Convertir_a_Unidades.php
-include 'P5_Instanciar.php';
-=======
 include 'Instanciar.php';
->>>>>>> cccce36c8b160c56c4ee4671fc47f6757e1b1d56:src/php/Datos/Convertir_a_Unidades.php
 
-class Bytes_a_Unidad extends Unidad_a_Bytes {
+class Gramos_a_Unidad extends Unidad_a_Gramos {
   
-  protected function Bytes_a_Unidades (){
+  protected function Gramos_a_Unidades (){
     $this->Captura ();
-    $this->Convertir_a_Bytes ();
+    $this->Convertir_a_Gramos ();
  
       switch ($this->to){
         case 'Bytes':
-          $ConvertirUnidad = $this->converBytes / parent::BYTE;
+          $ConvertirUnidad = $this->convertGram / parent::MICROGRAMO;
           echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
           break;
         case "Kilobytes":
-          $ConvertirUnidad = $this->converBytes / parent::KILOBYTE;
+          $ConvertirUnidad = $this->convertGram / parent::MILIGRAMO;
           echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
           break;
         case "Megabytes":
-          $ConvertirUnidad = $this->converBytes / parent::MEGABYTE;
+          $ConvertirUnidad = $this->convertGram / parent::GRAMO;
           echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
           break;
         case "Gigabytes":
-          $ConvertirUnidad = $this->converBytes / parent::GIGABYTE;
+          $ConvertirUnidad = $this->convertGram / parent::KILOGRAMO;
           echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
           break;
         case "Terabytes":
-          $ConvertirUnidad = $this->converBytes / parent::TERABYTE;
+          $ConvertirUnidad = $this->convertGram / parent::TONELADA;
           echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
         break;
       }
