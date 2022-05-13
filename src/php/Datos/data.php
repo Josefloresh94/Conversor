@@ -74,7 +74,7 @@
                             
    <!-- acá poner código php -->                         
    <?php 
-    include '2.Captura_de_Datos.php';
+    include 'Captura_de_Datos.php';
    ?>
                             </h3>
                         </div>

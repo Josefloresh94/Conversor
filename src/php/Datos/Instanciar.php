@@ -1,7 +1,7 @@
 <?php 
 ///EN ESTA CLASE VAMOS A INSTANCIAR
 
-class Instanciar extends Bytes_a_Unidades{
+class Instanciar extends Bytes_a_Unidad{
 
   public function Instancia() {
     $this->Captura ();

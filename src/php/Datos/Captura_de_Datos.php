@@ -1,7 +1,7 @@
 <?php
 ///EN ESTA CLASE SE TOMARAN LOS DATOS INGRESADOS POR EL USUARIO
 
-include '3.Convertir_a_Bytes.php';
+include 'Convertir_a_Bytes.php';
 
 class Datos {
   const BYTE = 1;

@@ -1,7 +1,7 @@
 <?php
 ///EN ESTA CLASE CONVERTIRREMOS DE BYTES A UNIDAD SELECCIONADA
 
-include '5.Instanciar.php';
+include 'Instanciar.php';
 
 class Bytes_a_Unidad extends Unidad_a_Bytes {
   
