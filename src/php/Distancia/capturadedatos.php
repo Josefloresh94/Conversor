@@ -3,8 +3,8 @@
 
  
   class Distancias {
-    const millimeters= 0.001;
-    const centimeters= 0.01;
+    const millimeters= 1000;
+    const centimeters= 100;
     const meters= 1;
     const kilometers=1000;
     const miles= 1609;

@@ -41,15 +41,15 @@ class Unidad_a_M extends Distancias  {
         
             
             if ($this->to=='millimeters') {
-                $ConvertirUnidad = $this->converM  / parent::millimeters;
-            echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
+                $ConvertirUnidad = $this->converM  * parent::millimeters;
+            echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to ;
 
             } elseif ($this->to=='centimeters'){
-                $ConvertirUnidad = $this->converM  / parent::centimeters;
+                $ConvertirUnidad = $this->converM  * parent::centimeters;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
 
             } elseif ($this->to=='meters'){
-                $ConvertirUnidad = $this->converM  / parent::meters;
+                $ConvertirUnidad = $this->converM  * parent::meters;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
 
             } elseif ($this->to=='kilometers'){
@@ -79,12 +79,9 @@ class Unidad_a_M extends Distancias  {
       $calculadora -> Instancia ();
 
 
-    class Hija extends Padre{
-    public function Convertir()
-    {
+    
         
-    }
-}
+
 
       
       
