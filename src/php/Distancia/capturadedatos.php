@@ -3,11 +3,11 @@
 
  
   class Distancias {
-    const millimeters= 1000;
-    const centimeters= 100;
-    const meters= 1;
-    const kilometers=1000;
-    const miles= 1609;
+    const Milimetros= 1000;
+    const Centimetros= 100;
+    const Metros= 1;
+    const Kilometros=1000;
+    const Millas= 1609;
 
     public $cantidad=null;
     public $from=null;
