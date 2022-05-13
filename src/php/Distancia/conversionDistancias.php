@@ -1,57 +1,90 @@
 <?php
-/// DATOS INGRESADOS POR EL USUARIO
+/// CONVERTIR A METROS 
 
-include 'longitud_clases.php';
+include 'capturadedatos.php';
 
-class Distancias {
-    public $millimeters ;
-    public $centimeters ;
-    public $meters ;
-    public $kilometers;
-    public $miles ;
+class Unidad_a_M extends Distancias  {
 
-    public $cantidad=null;
-    public $from=null;
-    public $to=null;
-    public $converM = null;
+    protected function Convertir_a_Mts(){
+       $this->Captura ();
+ 
+       if ($this->from=='millimeters') {
+         $this->converM = $this->cantidad/parent:: millimeters;
+ 
+       } elseif ($this->from=='centimeters'){
+         $this->converM = $this->cantidad/parent:: centimeters;
+ 
+       } elseif ($this->from=='meters'){
+         $this->converM = $this->cantidad*parent:: meters;
+ 
+       } elseif ($this->from=='kilometers'){
+         $this->converM = $this->cantidad*parent:: kilometers;
+ 
+       }  elseif ($this->from=='miles'){
+         $this->converBytes = $this->cantidad*parent:: miles;
+ 
+       }  else {
+         ;
+     } 
+     
+}
+}  
 
-    public  function Captura (){
-        if (isset($_POST['enviar'])) {
-            $this->cantidad = $_POST['cantidad'];
-            $this->from = $_POST['from_unit'];
-            $this->to = $_POST['to_unit'];
-            $this->converM;
-            return $this->cantidad;
-            return $this->from;
-            return $this->to;
-            return $this->converM;
-        }       
+/// CONVERTIR DE METROS A LAS DEMAS DISTANCIAS
+
+    class M_a_distancias extends Unidad_a_M {
+
+        public function M_a_Unidad (){
+            $this->Captura ();
+            $this->Convertir_a_Mts();
+
+        
+            
+            if ($this->to=='millimeters') {
+                $ConvertirUnidad = $this->converM  * parent::millimeters;
+            echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to ;
+
+            } elseif ($this->to=='centimeters'){
+                $ConvertirUnidad = $this->converM  * parent::centimeters;
+                echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
+
+            } elseif ($this->to=='meters'){
+                $ConvertirUnidad = $this->converM  * parent::meters;
+                echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
+
+            } elseif ($this->to=='kilometers'){
+                $ConvertirUnidad = $this->converM  / parent::kilometers;
+                echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
+                
+            }  elseif ($this->to=='miles'){
+                $ConvertirUnidad = $this->converM  / parent::miles;
+                echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
+            }  else {
+                ;
+            }         
+        }
+
     }
 
-}
-class M_a_Unidades extends Distancias{
+    class Instanciar extends M_a_distancias{
 
-    public function M_a_Unidad (){
-        $this->Captura ();
-        if ($this->to=='millimeters') {
-            $converLong = $this->converM*1000;
-            echo $this->cantidad." ".$this->from." equivale ".$converLong." ".$this->to;
-        } elseif ($this->to=='centimeters'){
-            $converLong = $this->converM*100;
-            echo $this->cantidad." ".$this->from." equivale ".$converLong." ".$this->to;
-        } elseif ($this->to=='meters'){
-            $converLong = $this->converM*1;
-            echo $this->cantidad." ".$this->from." equivale ".$converLong." ".$this->to;
-        } elseif ($this->to=='kilometers'){
-            $converLong = $this->converM/1000;
-            echo $this->cantidad." ".$this->from." equivale ".$converLong." ".$this->to;
-        }  elseif ($this->to=='miles'){
-            $converLong = $this->converM/1609;
-            echo $this->cantidad." ".$this->from." equivale ".$converLong." ".$this->to;
-        }  else {
-            ;
-        }         
-    }
-}
+        public function Instancia() {
+          $this->Captura ();
+          $this->Convertir_a_Mts ();
+          $this->M_a_Unidad ();
+        }
+      }
+      
+      $calculadora = new Instanciar;
+      $calculadora -> Instancia ();
 
-?>
+
+    
+        
+
+
+      
+      
+
+
+
