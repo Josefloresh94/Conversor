@@ -40,10 +40,10 @@
                             <label for='' class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
 
                             <!-- CANTIDAD INGRESADA POR USUARIO-->
-                                <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus>
+                                <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus oninvalid="this.setCustomValidity('Por favor ingrese la cantidad a convertir')">
 
                             <!-- UNIDAD DE ORIGEN ELEGIDA POR USUARIO-->
-                                <select name='from_unit' class="conversor__data-cantidades" value='from_unit' required>
+                                <select name='from_unit' class="conversor__data-cantidades" value='from_unit' required oninvalid="this.setCustomValidity('Por favor seleccione la unidad de origen')" oninput="setCustomValidity('')" >
                                     <option value selected>Unidades</option>
                                     <option value="Bytes">Bytes</option>
                                     <option value="Kilobytes">Kilobytes</option>
@@ -56,7 +56,7 @@
                             <div class="conversor__options-container">
                                 
                                 <!-- UNIDAD DE DESTINO ELEGIDA POR USUARIO-->
-                                <select name='to_unit' class="conversor__options-cantidades" value='to_unit' required>
+                                <select name='to_unit' class="conversor__options-cantidades" value='to_unit' required oninvalid="this.setCustomValidity('Por favor seleccione la unidad de destino')" oninput="setCustomValidity('')">
                                     <option value selected>Unidades</option>
                                     <option value="Bytes">Bytes</option>
                                     <option value="Kilobytes">Kilobytes</option>
