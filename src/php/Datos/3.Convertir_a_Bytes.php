@@ -23,7 +23,7 @@ class Unidad_a_Bytes extends Datos {
          case "Terabytes":
             $this->converBytes = $this->cantidad * parent::TERABYTE;
             break;
-         }
+      }
    }
 }
 ?>
