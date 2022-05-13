@@ -8,16 +8,16 @@ class Unidad_a_M extends Distancias  {
     protected function Convertir_a_Mts(){
        $this->Captura ();
  
-       if ($this->from=='Milimetros') {
+       if ($this->from=='Milímetros') {
          $this->converM = $this->cantidad/parent:: Milimetros;
  
-       } elseif ($this->from=='Centimetros'){
+       } elseif ($this->from=='Centímetros'){
          $this->converM = $this->cantidad/parent:: Centimetros;
  
        } elseif ($this->from=='Metros'){
          $this->converM = $this->cantidad*parent:: Metros;
  
-       } elseif ($this->from=='Kilometros'){
+       } elseif ($this->from=='Kilómetros'){
          $this->converM = $this->cantidad*parent:: Kilometros;
  
        }  elseif ($this->from=='Millas'){

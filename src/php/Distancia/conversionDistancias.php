@@ -11,11 +11,11 @@ include 'conversionametros.php';
 
         
             
-            if ($this->to=='Milimetros') {
+            if ($this->to=='Milímetros') {
                 $ConvertirUnidad = $this->converM  * parent::Milimetros;
             echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to ;
 
-            } elseif ($this->to=='Centimetros'){
+            } elseif ($this->to=='Centímetros'){
                 $ConvertirUnidad = $this->converM  * parent::Centimetros;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
 
@@ -23,7 +23,7 @@ include 'conversionametros.php';
                 $ConvertirUnidad = $this->converM  * parent::Metros;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
 
-            } elseif ($this->to=='Kilometros'){
+            } elseif ($this->to=='Kilómetros'){
                 $ConvertirUnidad = $this->converM  / parent::Kilometros;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
                 

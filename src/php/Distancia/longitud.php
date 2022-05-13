@@ -13,7 +13,7 @@
         input[type=number]::-webkit-outer-spin-button{
         -webkit-appearance: none;
         margin: 0;
-    }
+        }
     </style>
 
 </head>
@@ -23,62 +23,61 @@
             <h1>Conversor de Unidades</h1>
         </div>
         <div class="header__subtitle-container">
-            <p>¿Qué unidad deseas convertir?</p>
+            <p>Longitud</p>
         </div>
     </header>
     <main>
         <section id="conversor" class="main__conversor">
             <div class="conversor__title">
-                <h2>Escoge la unidad de medida que necesitas.</h2>
+                <h2>Ingresa el valor y selecciona la unidad a convertir</h2>
             </div>
             <section class="conversor__container-slider">
-                <article class="conversor__container-card">
-                    <p class="unitie">Longitud</p>
-                    <div class="conversor__info-container">
+                <article class="conversor__container-card"  >
+                        <div class="conversor__info-container">
                         <form action="" method="post">
                             <div class="conversor__longitud">
-                            <label for='' class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</label>
+                            
+                            <!-- CANTIDAD INGRESADA POR USUARIO-->
+                                <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus oninvalid="this.setCustomValidity('Por favor ingrese la cantidad a convertir')">
 
-                            <!-- CANTIDAD -->
-                                <input class="conversor__longitud-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus>
-
-                            <!-- F R O M (PONER NAME A SELECT Y VALUE A OPTION)-->
-                                <select name='from_unit' class="conversor__longitud-cantidades" value='from_unit'>
-                            <!--    <option value="" selected>Unidades</option> -->
-                                    <option value="Milimetros">Milimetros</option>
-                                    <option value="Centimetros">Centimetros</option>
+                            <!-- UNIDAD DE ORIGEN ELEGIDA POR USUARIO-->
+                                <select name='from_unit' class="conversor__longitud-cantidades" value='from_unit' required oninvalid="this.setCustomValidity('Por favor seleccione la unidad de origen')" oninput="setCustomValidity('')" >
+                                    <option value selected>Unidades</option>
+                                    <option value="Milímetros">Milimetros</option>
+                                    <option value="Centímetros">Centimetros</option>
                                     <option value="Metros">Metros</option>
-                                    <option value="Kilometros">Kilometros</option>
+                                    <option value="Kilómetros">Kilometros</option>
                                     <option value="Millas">Millas</option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">Selecciona la unidad a convertir</h3>
                             <div class="conversor__options-container">
                                 
-                                <!-- T O (PONER NAME A SELECT Y VALUE A OPTION)-->
-                                <select name='to_unit' class="conversor__options-cantidades" value='to_unit'>
-                                    <!--    <option value="" selected>Unidades</option> -->
-                                    <option value="Milimetros">Milimetros</option>
-                                    <option value="Centimetros">Centimetros</option>
+                                <!-- UNIDAD DE DESTINO ELEGIDA POR USUARIO-->
+                                <select name='to_unit' class="conversor__options-cantidades" value='to_unit' required oninvalid="this.setCustomValidity('Por favor seleccione la unidad de destino')" oninput="setCustomValidity('')">
+                                    <option value selected>Unidades</option>
+                                    <option value="Milímetros">Milimetros</option>
+                                    <option value="Centímetros">Centimetros</option>
                                     <option value="Metros">Metros</option>
-                                    <option value="Kilometros">Kilometros</option>
+                                    <option value="Kilómetros">Kilometros</option>
                                     <option value="Millas">Millas</option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">¡Convierte!</h3>
-                            <div class="conversor__button-container">
-                                <button class="conversor__button" name='enviar'>CONVERTIR</button>
-                            </div>
-                            <div class="conversor__answer-container">
-                                <h3 class="conversor__answer-longitud"> 
-                                    <br>
-                                    <!-- acá poner código php -->                         
-                                    <?php 
-                                        include 'conversionDistancias.php';
-                                    ?>
-                                </h3>
-                            </div>
+                        <div class="conversor__button-container">
+                            <button class="conversor__button" name='enviar'>CONVERTIR</button>
+                        </div>
+                        <div class="conversor__answer-container">
+                            <h3 class="conversor__answer-longitud"> 
+                                <br>
+                                <!-- acá poner código php -->                         
+                                <?php 
+                                    include 'conversionDistancias.php';
+                                ?>
+                            </h3>
+                        </div>
                         </form>
+                    <a class="conversor__button" href="../../../index.html">Regresar a menú principal</a>
                     </div>
                 </article>
             </section>
