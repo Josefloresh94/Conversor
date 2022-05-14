@@ -43,7 +43,7 @@ header {
 .header__title-container {
     width: 100%;
     min-width: 288px;
-    height: 80px;
+    height: 70px;
     text-align: center;
     align-self: center;
     background: var(--mustard);
@@ -52,7 +52,7 @@ header {
 .header__subtitle-container {
     width: 100%;
     min-width: 288px;
-    height: 20px;
+    height: 30px;
     text-align: center;
     align-self: center;
     background: var(--black);
@@ -108,7 +108,7 @@ main {
 .main__conversor {
     width: 100%;
     min-width: 320px;
-    /* padding-bottom: 30px; */
+    padding-bottom: 5px;
     text-align: center;
 }
 
@@ -117,44 +117,30 @@ main {
     min-width: 288px;
     height: auto;
     margin: 0 auto;
+
 }
 
 .conversor__title h2 {
     padding-top: 20px;
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: bold;
-    line-height: 2.6rem;
     color: var(--texto);
 }
 
 .conversor__container-card {
-    position: center;
+    position: relative;
     width: 70%;
     min-width: 230px;
     max-width: 300px;
     height: 450px;
-    margin: 30px 5px 0;
+    margin: 10px auto 0;
     background-color: var(--just-white);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 }
 
-.unitie {
-    position: absolute;
-    width: 120px;
-    height: 31px;
-    padding: 6px;
-    top: -15px;
-    left: calc(50% - 60px);
-    font-size: 1.5rem;
-    background-color: var(--mustard);
-    border-radius: 8px;
-    color: var(--texto);
-    cursor: pointer;
-}
-
 .conversor__card-title {
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 10px;
     font-size: 1.4rem;
     font-weight: 500;
@@ -178,7 +164,6 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 15px;
     padding-bottom: 15px;
 }
 
@@ -199,7 +184,6 @@ main {
 
 .conversor__button-container {
     padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 .conversor__button {
@@ -226,14 +210,37 @@ main {
 }
 
 .conversor__answer-data {
-    font-size: 1.6rem;
+    font-size: 2rem;
+}
+
+.backHome{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+.backHome__button {
+    left: calc(50% - 118);
+    margin: 10px auto;
+    padding: 15px;
+    width: 100%;
+    height: 48px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    background: var(--mustard);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--texto);
 }
 
 /* FOOTER */
 footer {
     display: flex;
     width: 100%;
-    height: 150px;
+    height: auto;
     background-color: var(--texto);
 }
 
@@ -242,6 +249,7 @@ footer section {
     width: 50%;
     justify-content: center;
     align-items: center;
+    margin: 14px 0;
 }
 
 footer .left ul{
@@ -258,4 +266,8 @@ footer .left ul{
 .left a {
     text-decoration: none;
     color: var(--just-white);
+}
+
+.right {
+    width: auto;
 }

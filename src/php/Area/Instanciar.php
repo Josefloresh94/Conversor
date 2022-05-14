@@ -1,12 +1,12 @@
 <?php 
 ///EN ESTA CLASE VAMOS A INSTANCIAR
 
-class Instanciar extends Bytes_a_Unidad{
+class Instanciar extends Area_a_Unidad{
 
     public function Instancia() {
-        $this->Captura ();
-        $this->Convertir_a_Bytes ();
-        $this->Bytes_a_Unidades ();
+        $this->Captura();
+        $this->Convertir_a_Area();
+        $this->Area_a_Unidades();
     }
 }
 

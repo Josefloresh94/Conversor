@@ -1,19 +1,19 @@
 header {
     width: 100%;
-    height: 223px;
+    height: 170px;
 }
 
 .header__title-container {
-    height: 150px;
+    height: 100px;
 }
 
 .header__subtitle-container {
-    height: 73px;
+    height: 70px;
     padding-top: 10px;
 }
 
 .header__title-container h1 {
-    font-size: 8rem;
+    font-size: 6rem;
 }
 
 .header__subtitle-container p {

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +7,8 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tablet.css" media="(min-width:768px)">
     <link rel="stylesheet" href="../../css/compu.css" media="(min-width:1024px)">
-    <title>Conversor</title>
+    <title>Area</title>
+
 </head>
 <body>
     <header>
@@ -17,56 +16,66 @@
             <h1>Conversor de Unidades</h1>
         </div>
         <div class="header__subtitle-container">
-            <p>¿Qué unidad deseas convertir?</p>
+            <p>AREA</p>
         </div>
     </header>
     <main>
         <section id="conversor" class="main__conversor">
-            <section class="conversor__container-slider">
+            <section>
                 <article class="conversor__container-card">
-                    <p class="unitie">Area</p>
+                    <!-- <p class="unitis">Datos</p> -->
                     <div class="conversor__info-container">
                         <h3 class="conversor__card-title">Ingresa el valor y selecciona la unidad a convertir</h3>
                         <form action="" method="post">
                             <div class="conversor__data">
-                                <input type="text" id="cantidades" class="conversor__data-input" name="category">
-                                <select name="" id="cantidades" class="conversor__data-cantidades">
-                                    <option selected>Unidades</option>
-                                    <option value="Longitud"<?php if($from_unit == '') { echo " selected"; } ?>>Longitud</option>
-                                    <option value="Masa"<?php if($from_unit == '') { echo " selected"; } ?>>Masa</option>
-                                    <option value="Volumen"<?php if($from_unit == '') { echo " selected"; } ?>>Volumen</option>
-                                    <option value="Datos"<?php if($from_unit == '') { echo " selected"; } ?>>Datos</option>
-                                    <option value="Moneda"<?php if($from_unit == '') { echo " selected"; } ?>>Moneda</option>
-                                    <option value="Tiempo"<?php if($from_unit == '') { echo " selected"; } ?>>Tiempo</option>
+
+                            <!-- CANTIDAD INGRESADA POR USUARIO-->
+                                <input class="conversor__data-input" type="number" name='cantidad' value='' step="any" title="Ingrese el valor de datos en números" required autofocus oninvalid="this.setCustomValidity('Por favor ingrese la cantidad a convertir')">
+
+                            <!-- UNIDAD DE ORIGEN ELEGIDA POR USUARIO-->
+                                <select name='from_unit' class="conversor__data-cantidades" value='from_unit' required oninvalid="this.setCustomValidity('Por favor seleccione la unidad de origen')" oninput="setCustomValidity('')" >
+                                    <option value selected>Unidades</option>
+                                    <option value="Decimetro Cuadrado">Decimetro Cuadrado</option>
+                                    <option value="Metro Cuadrado">Metro Cuadrado</option>
+                                    <option value="Decametro Cuadrado">Decametro Cuadrado</option>
+                                    <option value="Hectometro Cuadrado">Hectometro Cuadrado</option>
+                                    <option value="Kilometro Cuadrado">Kilometro Cuadrado</option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">Selecciona la unidad a convertir</h3>
                             <div class="conversor__options-container">
-                                <select name="" id="" class="conversor__options-cantidades">
-                                    <option selected>Unidades</option>
-                                    <option value="Longitud">Longitud</option>
-                                    <option value="Masa">Masa</option>
-                                    <option value="Volumen">Volumen</option>
-                                    <option value="Datos">Datos</option>
-                                    <option value="Moneda">Moneda</option>
-                                    <option value="Tiempo">Tiempo</option>
+                                
+                                <!-- UNIDAD DE DESTINO ELEGIDA POR USUARIO-->
+                                <select name='to_unit' class="conversor__options-cantidades" value='to_unit' required oninvalid="this.setCustomValidity('Por favor seleccione la unidad de destino')" oninput="setCustomValidity('')">
+                                    <option value selected>Unidades</option>
+                                    <option value="Decimetro Cuadrado">Decimetro Cuadrado</option>
+                                    <option value="Metro Cuadrado">Metro Cuadrado</option>
+                                    <option value="Decametro Cuadrado">Decametro Cuadrado</option>
+                                    <option value="Hectometro Cuadrado">Hectometro Cuadrado</option>
+                                    <option value="Kilometro Cuadrado">Kilometro Cuadrado</option>
                                 </select>
                             </div>
+                            <h3 class="conversor__card-subtitle">¡Convierte!</h3>
+                            <div class="conversor__button-container">
+                                <button class="conversor__button" name='enviar'>CONVERTIR</button>
+                            </div>
+                            <div class="conversor__answer-container">
+                                <h3 class="conversor__answer-data">
+                                    <br>
+                                    <!-- acá poner código php -->                         
+                                    <?php 
+                                        include 'CapturaDatos.php';
+                                    ?>
+                                </h3>
+                            </div>
                         </form>
-                        <h3 class="conversor__card-subtitle">¡Convierte!</h3>
-                        <div class="conversor__button-container">
-                            <button class="conversor__button">
-                                Convertir
-                            </button>
-                        </div>
-                        <div class="conversor__answer-container">
-                            <h3 class="conversor__answer-data"> 
-                                Tus "Datos ingresados" equivalen a "Datos convertidos
-                            </h3>
-                        </div>
                     </div>
                 </article>
             </section>
+            <section class="backHome">
+                <a class="backHome__button" href="../../../index.html">Home</a>
+            </section>
+            
         </section>
     </main>
     <footer>
@@ -80,7 +89,7 @@
             </ul>
         </section>
         <section class="right">
-            <img src="" alt="">
+            <img src="../../../assets/Kodigo.png" alt="">
         </section>
     </footer>
 </body>
