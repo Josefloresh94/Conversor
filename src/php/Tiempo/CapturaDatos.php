@@ -1,19 +1,19 @@
 <?php
 ///EN ESTA CLASE SE TOMARAN LOS DATOS INGRESADOS POR EL USUARIO
 
-include 'ConvertirToArea.php';
+include 'ConvertirToTime.php';
 
-class Area {
-    const DECIMETRO_CUADRADO    = 0.01;
-    const METRO_CUADRADO        = 1;
-    const DECAMETRO_CUADRADO    = 100;
-    const HECTOMETRO_CUADRADO   = 10000;
-    const KILOMETRO_CUADRADO    = 1000000;
+class Tiempo {
+    const SEGUNDO   = 1;
+    const MINUTO    = 60;
+    const HORA      = 3600;
+    const DIA       = 86400;
+    const SEMANA    = 604800;
 
     protected $cantidad     =null;
     protected $from         =null;
     protected $to           =null;
-    protected $converArea  = null;
+    protected $converTime  = null;
 
     protected  function Captura (){
         if (isset($_POST['enviar'])) {

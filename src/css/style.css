@@ -260,6 +260,7 @@ footer .left ul{
 }
 
 .left li {
+    color: var(--just-white);
     margin: 10px 0;
 }
 

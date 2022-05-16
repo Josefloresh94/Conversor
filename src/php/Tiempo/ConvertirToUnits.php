@@ -3,31 +3,31 @@
 
 include 'Instanciar.php';
 
-class Area_a_Unidad extends Unidad_a_Area {
+class Tiempo_a_Unidad extends Unidad_a_Tiempo {
     
-    protected function Area_a_Unidades (){
+    protected function Tiempo_a_Unidades (){
         $this->Captura ();
-        $this->Convertir_a_Area ();
+        $this->Convertir_a_Tiempo ();
     
         switch ($this->to){
-            case "Decimetro Cuadrado":
-                $ConvertirUnidad = $this->converArea / parent::DECIMETRO_CUADRADO;
+            case "Segundo":
+                $ConvertirUnidad = $this->converTime / parent::SEGUNDO;
                 echo $this->cantidad." ".$this->from." equivale ".$ConvertirUnidad." ".$this->to;
             break;
-            case "Metro Cuadrado":
-                $ConvertirUnidad = $this->converArea / parent::METRO_CUADRADO;
+            case "Minuto":
+                $ConvertirUnidad = $this->converTime / parent::MINUTO;
                 echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
             break;
-            case "Decametro Cuadrado":
-                $ConvertirUnidad = $this->converArea / parent::DECAMETRO_CUADRADO;
+            case "Hora":
+                $ConvertirUnidad = $this->converTime / parent::HORA;
                 echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
             break;
-            case "Hectometro Cuadrado":
-                $ConvertirUnidad = $this->converArea / parent::HECTOMETRO_CUADRADO;
+            case "Dia":
+                $ConvertirUnidad = $this->converTime / parent::DIA;
                 echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
             break;
-            case "Kilometro Cuadrado":
-                $ConvertirUnidad = $this->converArea / parent::KILOMETRO_CUADRADO;
+            case "Semana":
+                $ConvertirUnidad = $this->converTime / parent::SEMANA;
                 echo $this->cantidad." ".$this->from." equivale a ".$ConvertirUnidad." ".$this->to;
             break;
         }

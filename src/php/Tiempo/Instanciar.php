@@ -1,12 +1,12 @@
 <?php 
 ///EN ESTA CLASE VAMOS A INSTANCIAR
 
-class Instanciar extends Area_a_Unidad{
+class Instanciar extends Tiempo_a_Unidad{
 
     public function Instancia() {
         $this->Captura();
-        $this->Convertir_a_Area();
-        $this->Area_a_Unidades();
+        $this->Convertir_a_Tiempo();
+        $this->Tiempo_a_Unidades();
     }
 }
 

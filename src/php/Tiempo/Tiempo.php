@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tablet.css" media="(min-width:768px)">
     <link rel="stylesheet" href="../../css/compu.css" media="(min-width:1024px)">
-    <title>Area</title>
+    <title>Tiempo</title>
 
 </head>
 <body>
@@ -16,7 +16,7 @@
             <h1>Conversor de Unidades</h1>
         </div>
         <div class="header__subtitle-container">
-            <p>AREA</p>
+            <p>TIEMPO</p>
         </div>
     </header>
     <main>
@@ -35,11 +35,11 @@
                             <!-- UNIDAD DE ORIGEN ELEGIDA POR USUARIO-->
                                 <select name='from_unit' class="conversor__data-cantidades" value='from_unit' required oninvalid="this.setCustomValidity('Por favor seleccione la unidad de origen')" oninput="setCustomValidity('')" >
                                     <option value selected>Unidades</option>
-                                    <option value="Decimetro Cuadrado">Decimetro Cuadrado</option>
-                                    <option value="Metro Cuadrado">Metro Cuadrado</option>
-                                    <option value="Decametro Cuadrado">Decametro Cuadrado</option>
-                                    <option value="Hectometro Cuadrado">Hectometro Cuadrado</option>
-                                    <option value="Kilometro Cuadrado">Kilometro Cuadrado</option>
+                                    <option value="Segundo">Segundo</option>
+                                    <option value="Minuto">Minuto</option>
+                                    <option value="Hora">Hora</option>
+                                    <option value="Dia">Dia</option>
+                                    <option value="Semana">Semana</option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">Selecciona la unidad a convertir</h3>
@@ -48,11 +48,11 @@
                                 <!-- UNIDAD DE DESTINO ELEGIDA POR USUARIO-->
                                 <select name='to_unit' class="conversor__options-cantidades" value='to_unit' required oninvalid="this.setCustomValidity('Por favor seleccione la unidad de destino')" oninput="setCustomValidity('')">
                                     <option value selected>Unidades</option>
-                                    <option value="Decimetro Cuadrado">Decimetro Cuadrado</option>
-                                    <option value="Metro Cuadrado">Metro Cuadrado</option>
-                                    <option value="Decametro Cuadrado">Decametro Cuadrado</option>
-                                    <option value="Hectometro Cuadrado">Hectometro Cuadrado</option>
-                                    <option value="Kilometro Cuadrado">Kilometro Cuadrado</option>
+                                    <option value="Segundo">Segundo</option>
+                                    <option value="Minuto">Minuto</option>
+                                    <option value="Hora">Hora</option>
+                                    <option value="Dia">Dia</option>
+                                    <option value="Semana">Semana</option>
                                 </select>
                             </div>
                             <h3 class="conversor__card-subtitle">¡Convierte!</h3>
